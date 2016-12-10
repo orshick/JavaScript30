@@ -75,7 +75,7 @@
       height: 8px;
       width: 35%;
       transform: translateX(15%);
-      transform-origin: 142%;
+      transform-origin: 143%;
     }
 
   </style>
@@ -99,7 +99,6 @@
       secondHand.style.transform = "rotate(" + (secondsDegrees += 1/60*360) + "deg)";
       hourHand.style.transform = "rotate(" + (hoursDegrees += 1/12/60/60*360) + "deg) translateX(43%)";
     }
-    
     console.log(seconds);
     setInterval(updateTime,1000)
   }
