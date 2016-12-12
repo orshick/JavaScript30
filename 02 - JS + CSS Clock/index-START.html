@@ -74,8 +74,7 @@
     .hour-hand {
       height: 8px;
       width: 35%;
-      /*transform: translateX(15%);*/
-      transform-origin: 142.857%%;
+      transform-origin: 142.857%; /* because 15/35 = 42.857% */
     }
 
   </style>
@@ -98,9 +97,12 @@
       minHand.style.transform = "rotate(" + (minutesDegrees += 1/60/60*360) + "deg)";
       secondHand.style.transform = "rotate(" + (secondsDegrees += 1/60*360) + "deg)";
       hourHand.style.transform = "rotate(" + (hoursDegrees += 1/12/60/60*360) + "deg) translateX(42.857%)";
+      // console.log(document.querySelector(".hour-hand"));
     }
     setInterval(updateTime,1000)
     updateTime(); // To start with the correct updated time, before setInterval kicks in
+    var fish, grime = null;
+    console.log(fish)
 
   }
 
